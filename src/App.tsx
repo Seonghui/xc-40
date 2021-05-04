@@ -1,31 +1,43 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  HashRouter,
-} from 'react-router-dom'
+import { Switch, Route, Link, HashRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import Sub1 from './pages/Sub1'
 import Sub2 from './pages/Sub2'
 import Payment from './pages/Payment'
 import PaymentHandler from './pages/PaymentHandler'
+import styled from 'styled-components'
+
+const Styled = {
+  NavList: styled.ul`
+    display: flex;
+    justify-content: space-between;
+  `,
+  NavItem: styled.li`
+    width: 100%;
+    height: 30px;
+    background-color: #d7d7d7;
+    text-align: center;
+    line-height: 30px;
+    & + & {
+      margin-left: 10px;
+    }
+  `,
+}
 
 function App() {
   return (
     <HashRouter>
-      <ul>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/sub1'>sub1</Link>
-        </li>
-        <li>
-          <Link to='/sub2'>sub2</Link>
-        </li>
-      </ul>
+      <Styled.NavList>
+        <Styled.NavItem>
+          <Link to='/'>HOME</Link>
+        </Styled.NavItem>
+        <Styled.NavItem>
+          <Link to='/sub1'>SUB 1</Link>
+        </Styled.NavItem>
+        <Styled.NavItem>
+          <Link to='/sub2'>SUB 2</Link>
+        </Styled.NavItem>
+      </Styled.NavList>
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/modules/payment' component={Payment} />

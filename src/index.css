@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
