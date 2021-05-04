@@ -1,5 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  HashRouter,
+} from 'react-router-dom'
 import Home from './pages/Home'
 import Sub1 from './pages/Sub1'
 import Sub2 from './pages/Sub2'
@@ -8,7 +14,7 @@ import PaymentHandler from './pages/PaymentHandler'
 
 function App() {
   return (
-    <Router basename='/xc-40/'>
+    <HashRouter>
       <ul>
         <li>
           <Link to='/'>Home</Link>
@@ -27,7 +33,7 @@ function App() {
         <Route path='/sub1' component={Sub1} />
         <Route path='/sub2' component={Sub2} />
       </Switch>
-    </Router>
+    </HashRouter>
   )
 }
 

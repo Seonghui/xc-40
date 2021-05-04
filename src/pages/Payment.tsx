@@ -1,10 +1,10 @@
 import React, { ReactElement, useEffect } from 'react'
+import { BASE_URL, POPUP_URL } from '../constants'
 
 function Payment(): ReactElement {
   useEffect(function replaceEffect() {
-    window.location.replace(
-      'http://localhost:4040/?redirect-url=http://localhost:4000/'
-    )
+    const REPLACE_URL = `${POPUP_URL}?redirect-url=${BASE_URL}`
+    window.location.replace(REPLACE_URL)
   }, [])
 
   return <>테스트</>
