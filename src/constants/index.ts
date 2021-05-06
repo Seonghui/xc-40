@@ -4,5 +4,5 @@ export const BASE_URL =
     : 'http://localhost:4000/#/'
 export const POPUP_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://stellashyou.github.io/payment-popup/#/'
+    ? 'https://stellashyou.github.io/xc-60/#/'
     : 'http://localhost:4040/#/'

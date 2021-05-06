@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
-import { BASE_URL } from '../constants'
 
 const Styled = {
   Wrap: styled.div`
@@ -19,7 +18,7 @@ function PaymentContainer(): ReactElement {
         title='test'
         width='100%'
         height='100%'
-        src={`${BASE_URL}modules/payment?method=get&type=iframe`}
+        src={`/xc-40/#/modules/payment?method=get&type=iframe`}
         frameBorder={0}
       />
     </Styled.Wrap>
